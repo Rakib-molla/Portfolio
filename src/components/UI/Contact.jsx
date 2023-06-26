@@ -1,6 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
+
+    const form = useRef();
+    
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_ss7fbbg', 'template_1wjvx7c', form.current, 'QUUiG9-O2PzFFihdn')
+            .then((result) => {
+                if(result.status === 200){
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                }
+            
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
+  
     return (
         <section id='contact' className='pb-16 '>
             <div className='container'>
@@ -11,16 +37,20 @@ const Contact = () => {
                     </div>
                     <div className='w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-indigo-100 px-4 lg:px-8 py-8'>
                         <div className='w-full'>
-                            <div className='mb-5'>
-                                <input type="text" placeholder='Enter Your Name' className='w-full p-3 focus:outline-none rounded-[5px]' />
-                            </div>
-                            <div className='mb-5'>
-                                <input type="email" placeholder='Enter Your Email' className='w-full p-3 focus:outline-none rounded-[5px]' />
-                            </div>
-                            <div className='mb-5'>
-                                <textarea name=""  placeholder='Write Your Message' className='w-full p-3 focus:outline-none rounded-[5px]' rows="3"></textarea>
-                            </div>
-                        <button className='w-full p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-headingColor text-center ease-linear duration-200'>Send Message</button>
+                            <form ref={form} onSubmit={sendEmail}>
+
+                                <div className='mb-5'>
+                                    <input type="text" name="user_name" required placeholder='Enter Your Name' className='w-full p-3 focus:outline-none rounded-[5px]' />
+                                </div>
+                                <div className='mb-5'>
+                                    <input type="email" name="user_email" required placeholder='Enter Your Email' className='w-full p-3 focus:outline-none rounded-[5px]' />
+                                </div>
+                                <div className='mb-5'>
+                                    <textarea name="message" required placeholder='Write Your Message' className='w-full p-3 focus:outline-none rounded-[5px]' rows="3"></textarea>
+                                </div>
+                                <button type='submit' value='Send' className='w-full p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-headingColor text-center ease-linear duration-200'>Send Message</button>
+                                
+                            </form>
                         </div>
                     </div>
                 </div>
