@@ -3,20 +3,22 @@ import React from 'react';
 const Footer = () => {
     const year = new Date().getFullYear();
     return (
-        <footer className='bg-[#12141e] py-12'>
+        <footer className='bg-[#12141e] py-12 w-full'>
             <div className='container'>
                 <div className='sm: flex items-center justify-between md:gap-5'>
                     <div className='w-full sm:w-1/2'>
                         <h2 className='text-[26px] leading-10 text-white font-[600] mb-5 md:text-[2rem] capitalize'>
                             Do You want more beautiful product ?
                         </h2>
-                        <a href="#contact">
-                            <button className='bg-primaryColor text-white font-[500] flex items-center gap-3 hover:bg-smallTextColor ease-id duration-300 py-2 px-4 rounded-[8px] ms-3'> <i className='ri-mail-line'>Hire Me</i></button>
+                        <a target='_blank' href="https://www.fiverr.com/rakib_molla">
+                            <button  className='bg-primaryColor text-white font-[500] flex items-center gap-3 hover:bg-smallTextColor ease-id duration-300 py-2 px-4 rounded-[8px] ms-3'> <i className='ri-mail-line'>Hire Me</i></button>
                         </a>
                     </div>
                     <div className='w-full sm:w-1/2'>
                         <p className='text-gray-200 leading-7 mt-4 sm:mt-0'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui reiciendis accusamus maiores non quos, quasi numquam ducimus repudiandae nihil consequatur commodi tenetur sit harum quam deleniti officia praesentium aut voluptatem.
+                        Responsive Design: Ensure that your website is responsive and adapts to different screen sizes and devices. Use responsive design techniques, such as fluid layouts and CSS media queries, to optimize the website's appearance on mobile devices, tablets, and desktops. <br />
+
+                        Performance Optimization: Optimize your website's performance by minimizing the file size of assets (images, scripts, stylesheets), leveraging caching techniques, and optimizing code. Users appreciate fast-loading websites, so ensure your website loads quickly and efficiently.
                         </p>
                         <div className='flex  items-center  gap-4 flex-wrap md:gap-8 mt-10'>
                             <span className='text-gray-300 font-[600] text-[15px]'>Follow Me:

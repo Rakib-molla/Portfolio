@@ -9,7 +9,7 @@ const Services = () => {
                 <div className='text-center'>
                     <h2 className='text-headingColor font-[800] text-[2.4rem] mb-5'>How Can I help You </h2>
                     <p className='lg:mx-w-[400px] lg:mx-auto text-headingColor font-[500] text-[16px] leading-7'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam laborum animi porro quibusdam maxime dolore aspernatur fugit ducimus, perspiciatis necessitatibus nobis molestias recusandae labore provident iste doloribus nesciunt debitis quam!
+                    are you looking for a Web Application?  you are in the right place. I am building web applications using the MERN stack, which includes MongoDB, Express.js, React, and Node.js. Here are a few areas where you can provide assistance:
                     </p>
                 </div>
 
@@ -31,7 +31,7 @@ const Services = () => {
                                                     Front End Development
                                                 </h3>
                                                 <p className='text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-6'>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente est harum possimus laudantium commodi veniam quae quos at perspiciatis expedita, amet sunt  
+                                                You can contribute to building the user interface and client-side functionality using React. This includes creating reusable components, managing state using React hooks or Redux, integrating with backend APIs, and handling user interactions and form submissions.
                                                 </p>
                                             </div>
                                         </div>
@@ -56,7 +56,7 @@ const Services = () => {
                                                     Back End Development
                                                 </h3>
                                                 <p className='text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-6'>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente est harum possimus laudantium commodi veniam quae quos at perspiciatis expedita, amet sunt  
+                                                You can help design and develop the server-side components of a web application using Node.js and Express.js. This involves creating RESTful APIs, handling database operations with MongoDB, implementing authentication and authorization, and managing server-side routing. 
                                                 </p>
                                             </div>
                                         </div>
@@ -78,10 +78,10 @@ const Services = () => {
                                         <div className='w-full sm:w-1/2 sm:pr-8'>
                                             <div data-aos='fade-right' data-aos-duration='1200' className='bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150'>
                                                 <h3 className='text-primaryColor font-[700] mb-3 group-hover:text-white group-hover:font-[600] text-xl'>
-                                                    Ui/Ux Design
+                                                Database Management
                                                 </h3>
                                                 <p className='text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-6'>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente est harum possimus laudantium commodi veniam quae quos at perspiciatis expedita, amet sunt  
+                                                With your knowledge of MongoDB, you can assist in database design, schema creation, and data modeling. You can optimize database queries, ensure data integrity, and implement data validation and migration strategies. 
                                                 </p>
                                             </div>
                                         </div>
@@ -103,10 +103,10 @@ const Services = () => {
                                         <div className='w-full sm:w-1/2 sm:pl-8'>
                                             <div data-aos='fade-left' data-aos-duration='1200' className='bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150'>
                                                 <h3 className='text-primaryColor font-[700] mb-3 group-hover:text-white group-hover:font-[600] text-xl'>
-                                                    Web App Development
+                                                API Integration
                                                 </h3>
                                                 <p className='text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-6'>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente est harum possimus laudantium commodi veniam quae quos at perspiciatis expedita, amet sunt  
+                                                You can help integrate third-party APIs into the application, such as payment gateways, social media platforms, or mapping services. This involves handling API requests and responses, managing authentication and access tokens, and processing data from external sources.
                                                 </p>
                                             </div>
                                         </div>

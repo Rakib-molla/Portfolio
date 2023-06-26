@@ -2,7 +2,14 @@ import React from 'react';
 import heroImage from '../../assets/images/hero.svg';
 import CountUp from 'react-countup';
 
+const PDF_FILE_URL = 'http://localhost:5173/Md_Rakib_Molla_Resume.pdf'
+
 const Hero = () => {
+
+    const downloadResume =(e)=>{
+        e.preventDefault();
+    }
+
     return (
         <section>
             <div className="container" >
@@ -10,16 +17,18 @@ const Hero = () => {
                     {/* hero left content start */}
                     <div className='w-full md:basis-1/2'>
                         <h5 data-aos='fade-right' data-aos-duration='1500' className='text-headingColor font-[600] text-[16px]' >Hello Welcome</h5>
-                        <h1 data-aos='fade-up' data-aos-duration='1500' className='text-headingColor font-[800] sm:text-[40px] leading-[35px] sm:leading-[46px] mt-5'>I'm Rakib Molla <br />Web Developer </h1>
+                        <h1 data-aos='fade-up' data-aos-duration='1500' className='text-headingColor font-[800] sm:text-[40px] leading-[35px] sm:leading-[46px] mt-5'>I'm Rakib Molla <br /> MERN stack developer </h1>
                         <div
                         data-aos='fade-up'
                         data-aos-duration='1500'
                         data-aos-delay='200'
                         className='flex items-center gap-6 mt-7'>
-                            <a href="#contact">
-                                <button className='bg-primaryColor text-white font-[500] flex items-center gap-3 hover:bg-smallTextColor ease-id duration-300 py-2 px-4 rounded-[8px]'> <i className='ri-mail-line'>Hire Me</i></button>
+                            <a href="">
+                                <button className='bg-primaryColor text-white font-[500] flex items-center gap-3 hover:bg-smallTextColor ease-id duration-300 py-2 px-4 rounded-[8px]'> <i className='ri-mail-line'> <a target='_blank' href="https://www.fiverr.com/rakib_molla">Hire Me</a> </i></button>
                             </a>
-                            <a className='text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor' href="#portfolio">See Portfolio</a>
+                            <a onClick={()=>downloadResume(e)} className='text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor' href='Md_Rakib_Molla_Resume.pdf' 
+                            
+                            > <button>Download Resume</button></a>
 
                         </div>
                         <p data-aos='fade-left' data-aos-duration='1500' className='flex gap-2 text-headingColor font-[500] leading-7 sm:pl-14 sm:pr-10 mt-10'>
@@ -36,17 +45,17 @@ const Hero = () => {
                                 Follow Me:
                             </span>
                             <span>
-                                <a className='text-smallTextColor text-[15px] font-[600]' href="#linkedin">
+                                <a target='_blank' className='text-smallTextColor text-[15px] font-[600]' href="https://www.linkedin.com/in/rakib-molla/">
                                     <i className="ri-linkedin-box-fill"></i>
                                 </a>
                             </span>
                             <span>
-                                <a className='text-smallTextColor text-[15px] font-[600]' href="#github">
+                                <a className='text-smallTextColor text-[15px] font-[600]' target='_blank' href="https://github.com/rakib-molla">
                                 <i className="ri-github-fill"></i>
                                 </a>
                             </span>
                             <span>
-                                <a className='text-smallTextColor text-[15px] font-[600]' href="#stack">
+                                <a className='text-smallTextColor text-[15px] font-[600]' target='_blank' href="https://stackoverflow.com/users/11881190/rakib-molla">
                                 <i className="ri-stack-line"></i>
                                 </a>
                             </span>

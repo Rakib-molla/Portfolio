@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const headerRef = useRef(null);
@@ -59,8 +60,8 @@ const Header = () => {
 
                     {/* menu right */}
                     <div className='flex items-center gap-4'>
-                    <button className='flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300'>
-                        <i className="ri-send-plane-line"></i> Let's Talk
+                    <button to='facebook.com' className='flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in duration-300'>
+                        <i className="ri-send-plane-line"></i> <a target='_blank' href="https://www.fiverr.com/rakib_molla">Let's Talk</a>
                     </button>
 
                     <span onClick={toggleMenu} className='text-2xl text-smallTextColor cursor-pointer md:hidden'><i className="ri-menu-line"></i></span>
