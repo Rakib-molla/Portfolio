@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from '../../assets/images/hero.svg';
+import heroImage from '../../assets/images/rakib.png';
 import CountUp from 'react-countup';
 
 const PDF_FILE_URL = 'http://localhost:5173/Md_Rakib_Molla_Resume.pdf'
@@ -63,9 +63,9 @@ const Hero = () => {
                     </div>   {/* hero left content end */}
 
                     {/* hero image start */}
-                    <div className='basis-1/3 mt-10 sm:mt-0'>
+                    <div className='basis-1/3 mt-10 sm:mt-0 bg-blue-500 rounded-[100%] '>
                         <figure className='flex items-center justify-center'>
-                            <img src={heroImage} alt="" />
+                            <img src={heroImage} alt=""  className=' mb-0 w-[250px] rounded-[50%]' />
                         </figure>
                     </div> {/* hero image end */}
 
