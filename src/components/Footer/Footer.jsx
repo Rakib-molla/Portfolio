@@ -24,7 +24,7 @@ const Footer = () => {
                             <span className='text-gray-300 font-[600] text-[15px]'>Follow Me:
 
                                 <span className='w-[35px] h-[35px] bg-[#121433] rounded-[50px] cursor-pointer text-center ml-4'>
-                                    <a href="" className='text-gray-300 font-[500] text-[18px] '><i className="ri-github-line"></i></a>
+                                    <a href="https://github.com/rakib-molla" className='text-gray-300 font-[500] text-[18px] '><i className="ri-github-line"></i></a>
                                 </span>
                             </span>
 
@@ -43,7 +43,7 @@ const Footer = () => {
                                 </span>
                                 
                                 <div className='leading-[20px] ml-2'>
-                                    <h2 className='text-xl text-white font-[700]'>Rakib</h2>
+                                    <h2 className='text-xl text-white font-[700]'>Rakib Molla</h2>
                                     <p className='text-white text-[18px] font-[500]'> Personal Portfolio Website</p>
                                 </div>
                             </div>
