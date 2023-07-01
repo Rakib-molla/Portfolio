@@ -7,19 +7,19 @@ const Modal = ({ activeID, setShowModal }) => {
     const portfolio = portfolios.find(portfolio => portfolio.id == activeID);
 
     return (
-        <div className='w-full h-full fixed mt-[80px] top-0 left-0 z-40 bg-headingColor bg-opacity-40' id='modal'>
+        <div className='w-full h-full fixed mt-[70px] top-0 left-0  z-40 bg-headingColor bg-opacity-40' id='modal'>
             <div className='w-11/12 md:max-w-[600px] md:w-full absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5'>
                 <div className=''>
                     <figure>
-                        <img className='rounded-[8px] w-full h-[250px]' src={portfolio.imgUrl} alt="" />
+                        <img className='rounded-[8px] w-full h-[200px]' src={portfolio.imgUrl} alt="" />
                     </figure>
                 </div>
                 <div>
-                    <h2 className='text-2xl text-headingColor font-[700] my-5'>{portfolio.title}</h2>
+                    <h2 className='text-2xl text-headingColor font-[700] my-2'>{portfolio.title}</h2>
                     <p className='text-[15px] leading-6 text-smallTextColor'>
                         {portfolio.description}
                     </p>
-                    <div className='mt-5 flex items-center gap-3 flex-wrap my-2'>
+                    <div className='mb-2 flex items-center gap-3 flex-wrap '>
                         <h4 className='text-headingColor text-[18px] text-[700]'>Technologies: </h4>
                         {
                             portfolio.technologies.map((item, index)=>(
@@ -29,6 +29,11 @@ const Modal = ({ activeID, setShowModal }) => {
                                 </span>
                             ))
                         }
+                    </div>
+                    <div className=' flex items-center gap-3 flex-wrap my-2'>
+                        <article>
+                            {portfolio.details}
+                        </article>
                     </div>
                     <a>
                         <a href={portfolio.demo} target='_blank' className='bg-primaryColor ms-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'>Demo</a>
