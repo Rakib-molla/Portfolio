@@ -1,16 +1,17 @@
 import { prototype } from 'postcss/lib/comment';
 import portfolios from '../../assets/data/portfolioData';
+import { Link } from 'react-router-dom';
 
 const Modal = ({ activeID, setShowModal }) => {
 
     const portfolio = portfolios.find(portfolio => portfolio.id == activeID);
 
     return (
-        <div className='w-full h-full fixed top-0 left-0 z-10 bg-headingColor bg-opacity-40' id='modal'>
+        <div className='w-full h-full fixed mt-[80px] top-0 left-0 z-40 bg-headingColor bg-opacity-40' id='modal'>
             <div className='w-11/12 md:max-w-[600px] md:w-full absolute top-1/2 left-1/2 z-20 bg-white rounded-[8px] transform -translate-x-1/2 -translate-y-1/2 p-5'>
-                <div>
+                <div className=''>
                     <figure>
-                        <img className='rounded-[8px]' src={portfolio.imgUrl} alt="" />
+                        <img className='rounded-[8px] w-full h-[250px]' src={portfolio.imgUrl} alt="" />
                     </figure>
                 </div>
                 <div>
@@ -18,7 +19,7 @@ const Modal = ({ activeID, setShowModal }) => {
                     <p className='text-[15px] leading-6 text-smallTextColor'>
                         {portfolio.description}
                     </p>
-                    <div className='mt-5 flex items-center gap-3 flex-wrap'>
+                    <div className='mt-5 flex items-center gap-3 flex-wrap my-2'>
                         <h4 className='text-headingColor text-[18px] text-[700]'>Technologies: </h4>
                         {
                             portfolio.technologies.map((item, index)=>(
@@ -29,11 +30,11 @@ const Modal = ({ activeID, setShowModal }) => {
                             ))
                         }
                     </div>
-                    <a href="">
-                        <button className='bg-primaryColor ms-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'> Live Site</button>
-                        <button className='bg-primaryColor ms-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'> Server Code </button>
-                        <button className='bg-primaryColor ml-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'> Client Code </button>
-                    </a>
+                    <a>
+                        <a href={portfolio.demo} target='_blank' className='bg-primaryColor ms-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'>Demo</a>
+                        <a href={portfolio.server} target='_blank' className='bg-primaryColor ms-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'> Server </a>
+                        <a href={portfolio.client} target='_blank' className='bg-primaryColor ml-2 text-white py-2 px-4 my-8 rounded-[8px] hover:bg-black hover:text-white'> Client </a>
+                        </a>
                 </div>
                 <button onClick={()=>setShowModal(false)} className='w-[1.8rem] h-[1.8rem] bg-[white] absolute top-[1.7rem] right-[1.7rem] text-[25px] flex items-center justify-center rounded-[3px] leading-0 cursor-pointer'>x</button>
             </div>

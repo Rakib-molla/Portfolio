@@ -23,14 +23,14 @@ const Portfolio = () => {
             setPortfolios(data)
         }
 
-        if(selectTab == 'web-design'){
-            const filterData = data.filter(item => item.category == 'Web Design')
+        if(selectTab == 'front-end'){
+            const filterData = data.filter(item => item.category == 'front-end')
             setPortfolios(filterData)
         }
-        if(selectTab == 'ux-design'){
-            const filterData = data.filter(item => item.category == 'Ux')
+        if(selectTab == 'full-stack'){
+            const filterData = data.filter(item => item.category == 'full-stack')
             setPortfolios(filterData)
-            console.log('ux design');
+            // console.log('ux design');
         }
 
    },[selectTab])
@@ -48,11 +48,11 @@ const Portfolio = () => {
                         <button onClick={()=>setSelectTab('all')}  className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]'>
                             All
                         </button>
-                        <button onClick={()=>setSelectTab('web-design')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]'>
-                            Web Design
+                        <button onClick={()=>setSelectTab('front-end')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]'>
+                        front-end
                         </button>
-                        <button onClick={()=>setSelectTab('ux-design')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]'>
-                            UI/Ux Design 
+                        <button onClick={()=>setSelectTab('full-stack')} className='text-smallTextColor border border-solid border-smallTextColor py-2 px-4 rounded-[8px]'>
+                            Full Stack 
                         </button>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const Portfolio = () => {
                         portfolios?.slice(0, nextItem)?.map((portfolio, index) => (
                             <div key={index} data-aos='fade-zoom-in' data-aos-duration='1000' data-aos-delay='100' className='group max-w-full sm:w-[48.5%] md:w-[32.2%] lg:w-[32.2%] relative z-[1] rounded-[8px]'>
                                 <figure>
-                                    <img className='rounded-[8px]' src={portfolio.imgUrl} alt="" />
+                                    <img className='rounded-[8px] ' src={portfolio.imgUrl} alt="" />
                                 </figure>
 
                                 <div className='w-full h-full bg-primaryColor bg-opacity-40 absolute top-0 left-0 z-[5] hidden group-hover:block rounded-[8px]'>
