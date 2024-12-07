@@ -61,7 +61,7 @@ const Header = () => {
                     {/* menu right */}
                     <div className='flex items-center gap-4 '>
                     <button  className='flex w-[130px] items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-primaryColor hover:text-white hover:font-[500] hover:border-0 ease-in duration-300'>
-                        <i className="ri-send-plane-line  "></i> <a target='_blank'  href="https://www.fiverr.com/rakib_molla">Let's Talk</a>
+                        <i className="ri-send-plane-line  "></i> <a target='_blank'  href="https://www.linkedin.com/in/rakib-molla/">Let's Talk</a>
                     </button>
 
                     <span onClick={toggleMenu} className='text-2xl text-smallTextColor cursor-pointer md:hidden'><i className="ri-menu-line"></i></span>

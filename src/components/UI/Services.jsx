@@ -13,7 +13,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div className='flex flex-col justify-center sm:py-12 '>
+                <div className='flex flex-col justify-center sm:py-12 hidden md:block lg:block'>
                     <div className='w-full py-3 px-2 sm:max-w-xl sm:mx-auto sm:px-0'>
                         <div className='relative text-gray-700 antialiased text-sm font-semibold'>
                             {/* vertical running through the middle */}
